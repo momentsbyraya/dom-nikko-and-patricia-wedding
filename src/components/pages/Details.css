@@ -14,7 +14,7 @@
 
 .venue-title-text {
   line-height: 0.8;
-  color: #6B8FA3;
+  color: #CC5500;
 }
 
 /* Venue Image Container */
@@ -48,7 +48,7 @@
 
 .program-title-text {
   line-height: 0.8;
-  color: #6B8FA3;
+  color: #CC5500;
   display: block;
   text-align: center;
 }
@@ -83,7 +83,7 @@
 /* Dress Code */
 .dress-code-title-text {
   line-height: 0.8;
-  color: #6B8FA3;
+  color: #CC5500;
   white-space: nowrap;
 }
 
@@ -129,7 +129,7 @@
 /* Gift Registry */
 .gift-registry-title-text {
   line-height: 0.8;
-  color: #6B8FA3;
+  color: #CC5500;
 }
 
 .gift-button {
@@ -148,7 +148,7 @@
 
 .upload-title-text {
   line-height: 0.8;
-  color: #6B8FA3;
+  color: #CC5500;
 }
 
 .upload-qr-container {
@@ -173,7 +173,7 @@
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  background-color: #6B8FA3;
+  background-color: #CC5500;
 }
 
 .faq-title-text {

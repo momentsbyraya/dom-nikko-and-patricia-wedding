@@ -1,22 +1,28 @@
 {
   "bride": {
-    "firstName": "Emmariel",
-    "lastName": "Antonio",
-    "fullName": "EMMARIEL ALFANOSO ANTONIO"
+    "firstName": "Nikka Christine",
+    "lastName": "Billones",
+    "fullName": "NIKKA CHRISTINE BILLONES"
   },
   "groom": {
-    "firstName": "Mark Resty",
-    "lastName": "Derit",
-    "fullName": "MARK RESTY ROYO DERIT"
+    "firstName": "Alvin",
+    "lastName": "Ignacio",
+    "fullName": "ALVIN IGNACIO"
   },
-  "together": "Mark Resty & Emmariel",
-  "nickname": "Mark Resty and Emmariel",
+  "together": "Alvin & Nikka Christine",
+  "nickname": "Alvin and Nikka Christine",
   "wedding": {
-    "date": "2026-04-08",
-    "time": "1:00 PM",
-    "dayOfWeek": "Wednesday",
+    "date": "2026-04-07",
+    "time": "3:00 PM",
+    "dayOfWeek": "Tuesday",
     "month": "April",
-    "day": "8",
+    "day": "7",
+    "year": "2026"
+  },
+  "rsvpDeadline": {
+    "date": "2026-03-07",
+    "month": "March",
+    "day": "7",
     "year": "2026"
   }
 }

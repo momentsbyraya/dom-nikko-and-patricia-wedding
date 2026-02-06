@@ -53,7 +53,7 @@ const GiftRegistry = () => {
           </div>
           <h3 className="relative inline-block px-6 py-3">
             <span 
-              className="font-tebranos text-5xl sm:text-6xl md:text-7xl lg:text-8xl inline-block leading-none gift-registry-title-text"
+              className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none gift-registry-title-text"
               style={{ fontStyle: 'italic' }}
             >
               A notes on gifts...

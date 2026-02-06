@@ -1,25 +1,25 @@
 {
   "ceremony": {
-    "name": "Basilica of the National Shrine of Our Lady of Mount Carmel Cathedral",
-    "address": "020 Broadway Ave",
-    "city": "New Manila, Quezon City",
-    "state": "Metro Manila",
-    "zip": "Philippines",
-    "time": "1:00 PM",
-    "details": "Schedule: 1:00 PM",
-      "googleMapsUrl": "https://maps.app.goo.gl/nmHddmKZXFpzAYgdA",
-      "directionsUrl": "https://maps.app.goo.gl/nmHddmKZXFpzAYgdA"
+    "name": "Casa Elisa / Maple Events by Solange",
+    "address": "",
+    "city": "",
+    "state": "",
+    "zip": "",
+    "time": "3:00 PM",
+    "details": "Schedule: 3:00 PM",
+    "googleMapsUrl": "https://maps.app.goo.gl/9ARUK6MPcSzjFDFi8",
+    "directionsUrl": "https://maps.app.goo.gl/9ARUK6MPcSzjFDFi8"
   },
   "reception": {
-    "name": "Glass Garden Events Venue",
-    "address": "257 Evangelista Ave. Santolan", 
-    "city": "Pasig",
-    "state": "Metro Manila",
-    "zip": "1610, Philippines",
-    "time": "5:00 PM",
-    "details": "Schedule: 5:00 PM to 10:00 PM",
-    "landmark": "Events Venue",
-      "googleMapsUrl": "https://maps.app.goo.gl/DUmtDz9n3LpeR8kb8",
-      "directionsUrl": "https://maps.app.goo.gl/DUmtDz9n3LpeR8kb8"
+    "name": "Casa Elisa / Maple Events by Solange",
+    "address": "",
+    "city": "",
+    "state": "",
+    "zip": "",
+    "time": "6:00 PM",
+    "details": "Schedule: 6:00 PM onwards",
+    "landmark": "Same venue as ceremony",
+    "googleMapsUrl": "https://maps.app.goo.gl/9ARUK6MPcSzjFDFi8",
+    "directionsUrl": "https://maps.app.goo.gl/9ARUK6MPcSzjFDFi8"
   }
 }

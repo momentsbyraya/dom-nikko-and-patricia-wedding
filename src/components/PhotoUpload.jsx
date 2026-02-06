@@ -55,7 +55,7 @@ const PhotoUpload = () => {
               </div>
               <h3 className="relative inline-block px-6 upload-title">
                 <span 
-                  className="font-tebranos text-5xl sm:text-6xl md:text-7xl lg:text-8xl inline-block leading-none uppercase upload-title-text"
+                  className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none capitalize upload-title-text"
                 >
                   OH SNAP!
                 </span>

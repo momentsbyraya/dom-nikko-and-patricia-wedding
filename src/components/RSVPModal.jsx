@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { gsap } from 'gsap'
 import { X } from 'lucide-react'
 import { themeConfig } from '../config/themeConfig'
+import { couple } from '../data'
 
 const RSVPModal = ({ isOpen, onClose }) => {
   const modalRef = useRef(null)
@@ -113,8 +114,8 @@ const RSVPModal = ({ isOpen, onClose }) => {
             </div>
             <h3 className="relative inline-block px-6 py-3">
               <span 
-                className="font-tebranos text-5xl sm:text-6xl md:text-7xl lg:text-8xl inline-block leading-none"
-                style={{ fontStyle: 'italic' }}
+                className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none"
+                style={{ fontStyle: 'italic', color: themeConfig.text.burntOrange }}
               >
                 RSVP
               </span>
@@ -125,7 +126,7 @@ const RSVPModal = ({ isOpen, onClose }) => {
             <p className="text-sm sm:text-base font-albert font-thin text-[#333333] max-w-3xl mx-auto leading-relaxed text-center">
               As we count the days with hearts so bright,<br />
               Your RSVP helps make everything right.<br />
-              Kindly respond on or before<br /><strong className="!font-bold" style={{ fontWeight: 700 }}>February 28, 2026</strong>, we pray.<br />
+              Kindly respond on or before<br /><strong className="!font-bold" style={{ fontWeight: 700 }}>{couple.rsvpDeadline ? `${couple.rsvpDeadline.month} ${couple.rsvpDeadline.day}, ${couple.rsvpDeadline.year}` : 'March 7, 2026'}</strong>, we pray.<br />
               For after this date, arrangements are final and must stay.
             </p>
           </div>

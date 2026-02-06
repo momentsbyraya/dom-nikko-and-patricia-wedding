@@ -12,7 +12,6 @@ const Schedule = () => {
   const timelineRef = useRef(null)
   const lineRef = useRef(null)
   const eventsRef = useRef(null)
-  const dateSelectorRef = useRef(null)
 
   useEffect(() => {
     // Schedule title animation
@@ -26,95 +25,6 @@ const Schedule = () => {
         ),
         toggleActions: "play none none reverse"
       })
-    }
-
-    // Date Selector animation - heart, number, nearest boxes, furthest boxes
-    if (dateSelectorRef.current) {
-      const flexContainer = dateSelectorRef.current.querySelector('.flex.items-center')
-      if (flexContainer) {
-        const allItems = Array.from(flexContainer.children)
-        const heartContainer = allItems.find(item => item.querySelector('svg'))
-        const heartSvg = heartContainer?.querySelector('svg')
-        const heartNumber = heartContainer?.querySelector('.heart-day-number')
-        
-        // Find boxes by their position in the array
-        const nearestBoxes = allItems.filter((item, idx) => {
-          const isHeart = item.querySelector('svg')
-          if (isHeart) return false
-          // Find the heart's index
-          const heartIndex = allItems.findIndex(i => i.querySelector('svg'))
-          return idx === heartIndex - 1 || idx === heartIndex + 1
-        })
-        
-        const furthestBoxes = allItems.filter((item, idx) => {
-          const isHeart = item.querySelector('svg')
-          if (isHeart) return false
-          // Find the heart's index
-          const heartIndex = allItems.findIndex(i => i.querySelector('svg'))
-          return idx === 0 || idx === allItems.length - 1
-        })
-        
-        // Set initial states
-        if (heartSvg) {
-          gsap.set(heartSvg, { opacity: 0, scale: 0 })
-        }
-        if (heartNumber) {
-          gsap.set(heartNumber, { opacity: 0, scale: 0 })
-        }
-        nearestBoxes.forEach(box => {
-          gsap.set(box, { opacity: 0, x: -20 })
-        })
-        furthestBoxes.forEach(box => {
-          gsap.set(box, { opacity: 0, x: -20 })
-        })
-        
-        ScrollTrigger.create({
-          trigger: dateSelectorRef.current,
-          start: "top 75%",
-          onEnter: () => {
-            // 1. Animate heart SVG first
-            if (heartSvg) {
-              gsap.to(heartSvg, {
-                opacity: 1,
-                scale: 1,
-                duration: 0.6,
-                ease: "back.out(1.7)"
-              })
-            }
-            
-            // 2. Animate number inside heart
-            if (heartNumber) {
-              gsap.to(heartNumber, {
-                opacity: 1,
-                scale: 1,
-                duration: 0.5,
-                ease: "power2.out",
-                delay: 0.3
-              })
-            }
-            
-            // 3. Animate nearest boxes
-            gsap.to(nearestBoxes, {
-              opacity: 1,
-              x: 0,
-              duration: 0.6,
-              ease: "power2.out",
-              delay: 0.6,
-              stagger: 0.1
-            })
-            
-            // 4. Animate furthest boxes
-            gsap.to(furthestBoxes, {
-              opacity: 1,
-              x: 0,
-              duration: 0.6,
-              ease: "power2.out",
-              delay: 0.9,
-              stagger: 0.1
-            })
-          }
-        })
-      }
     }
 
     // Timeline line expansion from top to bottom
@@ -156,7 +66,6 @@ const Schedule = () => {
       ScrollTrigger.getAll().forEach(trigger => {
         if (trigger.vars && (
           trigger.vars.trigger === scheduleTitleRef.current ||
-          trigger.vars.trigger === dateSelectorRef.current ||
           trigger.vars.trigger === timelineRef.current ||
           trigger.vars.trigger === eventsRef.current
         )) {
@@ -172,7 +81,7 @@ const Schedule = () => {
       <div ref={scheduleTitleRef} className="relative z-10 mb-12 sm:mb-16 program-title-container">
         <h3 className="px-6 py-3">
           <span 
-            className="font-tebranos text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none uppercase program-title-text"
+            className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-none capitalize program-title-text"
           >
             Order of Events
           </span>
@@ -180,48 +89,6 @@ const Schedule = () => {
         <p className="text-sm sm:text-base md:text-lg font-albert text-[#333333] text-center mt-4 mx-auto px-4 program-description">
           Join us as we celebrate this special day together
         </p>
-        
-        {/* Date Selector */}
-        <div ref={dateSelectorRef} className="flex flex-col items-center mt-8">
-          <p className="text-base sm:text-lg font-boska mb-4 date-month-year">
-            {couple.wedding.month} {couple.wedding.year}
-          </p>
-          <div className="flex items-center gap-3 sm:gap-4">
-            {[parseInt(couple.wedding.day) - 2, parseInt(couple.wedding.day) - 1, parseInt(couple.wedding.day), parseInt(couple.wedding.day) + 1, parseInt(couple.wedding.day) + 2].map((day, index) => {
-              const isWeddingDay = day === parseInt(couple.wedding.day)
-              const isBesideHeart = index === 1 || index === 3
-              return (
-                <div key={index} className="relative">
-                  {isWeddingDay ? (
-                    <div className="relative flex items-center justify-center">
-                      <svg 
-                        className="w-20 h-20 sm:w-24 sm:h-24"
-                        viewBox="0 0 100 100"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                          d="M50,85 C30,70 10,50 10,30 C10,15 22,5 35,5 C42,5 48,8 50,12 C52,8 58,5 65,5 C78,5 90,15 90,30 C90,50 70,70 50,85 Z" 
-                          fill="#800000"
-                        />
-                      </svg>
-                      <span className="absolute inset-0 flex items-center justify-center text-white font-boska font-semibold text-xl sm:text-2xl heart-day-number">
-                        {day}
-                      </span>
-                    </div>
-                  ) : (
-                    <div 
-                      className={`flex items-center justify-center rounded-lg border ${isBesideHeart ? 'w-12 h-12 sm:w-14 sm:h-14 border-[#333333]/60' : 'w-10 h-10 sm:w-12 sm:h-12 border-[#333333]/30'}`}
-                    >
-                      <span className="text-[#333333] font-boska text-base sm:text-lg">
-                        {day}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </div>
-        </div>
       </div>
 
       {/* Vertical Timeline */}

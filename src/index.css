@@ -125,6 +125,24 @@
   font-display: swap;
 }
 
+/* Custom Font - Begova */
+@font-face {
+  font-family: 'Begova';
+  src: url('/assets/fonts/BegovaPersonalUsed-Rp69o.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Custom Font - Foglihten */
+@font-face {
+  font-family: 'Foglihten';
+  src: url('/assets/fonts/Foglihtenno06-VyZB.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -301,6 +319,18 @@ body {
 
 .font-tebranos {
   font-family: "Tebranos", serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-begova {
+  font-family: "Begova", serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-foglihten {
+  font-family: "Foglihten", serif;
   font-weight: normal;
   font-style: normal;
 }

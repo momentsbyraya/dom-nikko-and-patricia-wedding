@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css'
-import NavIndex from './components/NavIndex'
+import Home from './components/Home'
 import Footer from './components/Footer'
 import RSVPModal from './components/RSVPModal'
 import DynamicTitle from './components/DynamicTitle'
-import OpeningScreen from './components/OpeningScreen'
+// import OpeningScreen from './components/OpeningScreen'
 import Loader from './components/Loader'
 // import Watermark from './components/Watermark'
 import ScrollToTop from './components/ScrollToTop'
@@ -131,14 +131,14 @@ function AppContent() {
         </div>
       )}
       {/* OpeningScreen - shows after loading, before invitation */}
-      {!isLoading && !showInvitation && (
+      {/* {!isLoading && !showInvitation && (
         <OpeningScreen onEnvelopeOpen={handleEnvelopeOpen} />
-      )}
+      )} */}
       {/* Main content - shows after invitation is opened (stamp clicked) */}
-      {!isLoading && showInvitation && (
+      {!isLoading && (
         <>
           <Routes>
-            <Route path="/" element={<NavIndex onOpenRSVP={() => setIsRSVPModalOpen(true)} />} />
+            <Route path="/" element={<Home onOpenRSVP={() => setIsRSVPModalOpen(true)} />} />
             <Route path="/details" element={<Details />} />
             <Route path="/entourage" element={<Entourage />} />
             <Route path="/moments" element={<Moments />} />
