@@ -33,11 +33,13 @@ export const prenupImages = {
   countdownBackground: PRENUP_IMAGE_POOL[9],
   ogImage: PRENUP_IMAGE_POOL[4],
   favicon: PRENUP_IMAGE_POOL[0],
+  // Love story section: one polaroid per paragraph, in order (files 4, 8, 5, 10, 6)
   loveStory: [
+    PRENUP_IMAGE_POOL[3],
     PRENUP_IMAGE_POOL[7],
-    PRENUP_IMAGE_POOL[8],
+    PRENUP_IMAGE_POOL[4],
     PRENUP_IMAGE_POOL[9],
-    PRENUP_IMAGE_POOL[10],
+    PRENUP_IMAGE_POOL[5],
   ],
   gallery: [
     PRENUP_IMAGE_POOL[0],

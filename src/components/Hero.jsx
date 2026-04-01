@@ -1,8 +1,10 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { couple, venues, prenupImages } from '../data'
+import ImageLightbox from './ImageLightbox'
 
 const Hero = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false)
   const coupleTogetherRef = useRef(null)
   const dateRef = useRef(null)
   const venueRef = useRef(null)
@@ -59,9 +61,25 @@ const Hero = () => {
       <img
         src={prenupImages.hero}
         alt={heroAlt}
-        className="absolute left-1/2 top-1/2 h-[102%] w-[102%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center"
+        className="absolute left-1/2 top-1/2 h-[102%] w-[102%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center cursor-pointer"
         fetchPriority="high"
         decoding="async"
+        role="button"
+        tabIndex={0}
+        aria-label={heroAlt ? `Zoom: ${heroAlt}` : 'Zoom image'}
+        onClick={() => setLightboxOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            setLightboxOpen(true)
+          }
+        }}
+      />
+      <ImageLightbox
+        isOpen={lightboxOpen}
+        src={prenupImages.hero}
+        alt={heroAlt}
+        onClose={() => setLightboxOpen(false)}
       />
 
       <svg
@@ -85,7 +103,7 @@ const Hero = () => {
         <rect width="100%" height="100%" fill="url(#topGradient)" filter="url(#heroBlurTop)" />
       </svg>
       
-      <div className="absolute top-0 left-0 right-0 pt-8 sm:pt-12 md:pt-16 lg:pt-20 px-4 sm:px-6 md:px-8 z-20">
+      <div className="pointer-events-none absolute top-0 left-0 right-0 pt-8 sm:pt-12 md:pt-16 lg:pt-20 px-4 sm:px-6 md:px-8 z-20">
         <div className="max-w-4xl mx-auto text-center">
           <p ref={dateRef} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-foglihten text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.25)' }}>
             {formatDate()}
@@ -117,7 +135,7 @@ const Hero = () => {
         <rect width="100%" height="100%" fill="url(#bottomGradient)" filter="url(#heroBlurBottom)" />
       </svg>
 
-      <div className="absolute bottom-0 left-0 right-0 pb-10 sm:pb-12 md:pb-14 lg:pb-16 px-4 sm:px-6 md:px-8 z-20">
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 pb-10 sm:pb-12 md:pb-14 lg:pb-16 px-4 sm:px-6 md:px-8 z-20">
         <div className="max-w-4xl mx-auto text-center">
           <p
             ref={coupleTogetherRef}

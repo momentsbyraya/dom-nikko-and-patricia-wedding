@@ -1,23 +1,23 @@
 {
   "title": "Our Love Story",
-  "content": "He was my student during my internship, seated by the window with sunlight resting on his quiet smile.\n\nWhat started as simple lessons and after-class questions slowly turned into shared laughter and lingering glances.\n\nSomewhere between lectures and campus hallways, we found something sweeter than we ever planned — each other. 💗",
+  "content": "It all began as schoolmates, sharing simple moments in classrooms and hallways until friendship slowly became something deeper.\n\nAs workmates, we discovered how strong we were as a team. Through busy days and long hours, we kept showing up for each other.\n\nWe became food buddies, turning ordinary meals into little celebrations and collecting memories one bite at a time.\n\nThen came our adventures as travel buddies, exploring new places, chasing sunsets, and choosing each other in every journey.\n\nNow, as proud furr parents, our home is fuller, happier, and filled with love. From schoolmates to soulmates, every chapter led us here.",
   "timeline": [
     {
-      "title": "The Beginning",
-      "date": "Internship",
-      "description": "He was my student during my internship, seated by the window with sunlight resting on his quiet smile.",
+      "title": "Schoolmates",
+      "date": "The Beginning",
+      "description": "It all began as schoolmates, sharing simple moments in classrooms and hallways until friendship slowly became something deeper.",
       "image": "couple2"
     },
     {
-      "title": "Lessons & Laughter",
-      "date": "Getting to Know",
-      "description": "What started as simple lessons and after-class questions slowly turned into shared laughter and lingering glances.",
+      "title": "Workmates and Food Buddies",
+      "date": "Growing Together",
+      "description": "As workmates, we became a team, and as food buddies, we turned ordinary meals into unforgettable memories.",
       "image": "couple4"
     },
     {
-      "title": "Finding Each Other",
+      "title": "Travel and Furr Family",
       "date": "Our Story",
-      "description": "Somewhere between lectures and campus hallways, we found something sweeter than we ever planned — each other. 💗",
+      "description": "As travel buddies and now furr parents, we built a life full of adventure, warmth, and love that keeps growing every day.",
       "image": "couple7"
     }
   ]

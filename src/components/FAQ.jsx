@@ -113,7 +113,7 @@ const FAQ = () => {
             ease: "power2.out",
             onComplete: () => {
               // 2. After title animation, find and animate items one after the other
-              const faqItemsContainer = faqRef.current.querySelector('.space-y-6')
+              const faqItemsContainer = faqRef.current.querySelector('.faq-items')
               if (faqItemsContainer) {
                 const faqItems = Array.from(faqItemsContainer.children).filter(child => child.tagName === 'DIV')
                 
@@ -154,11 +154,14 @@ const FAQ = () => {
           </span>
         </h3>
         {faqItems && faqItems.faqData && (
-          <div className="space-y-6 max-w-[600px] mx-auto">
+          <div className="faq-items max-w-[600px] mx-auto">
             {faqItems.faqData.map((item, index) => {
               const { text } = getFaqIconAndText(item.question)
               return (
-                <div key={index}>
+                <div
+                  key={index}
+                  className="border-b border-obsidian pb-6 pt-6 first:pt-0 last:border-b-0"
+                >
                   <div className="mb-2">
                     <p className="text-base sm:text-lg font-albert text-forest mb-2 faq-question-bold">
                       Q: {text}
@@ -167,9 +170,6 @@ const FAQ = () => {
                       A: {parseAnswerWithPhoneNumbers(item.answer)}
                     </p>
                   </div>
-                  {index < faqItems.faqData.length - 1 && (
-                    <div className="h-px bg-gold/40 mt-6"></div>
-                  )}
                 </div>
               )
             })}
