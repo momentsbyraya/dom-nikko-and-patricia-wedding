@@ -32,7 +32,7 @@
 
 /* Program Section */
 .program-section {
-  padding: 4rem 0;
+  padding: 0 0 4rem 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -73,7 +73,7 @@
 }
 
 .timeline-event-time {
-  color: #AA8D5A;
+  color: #b88917;
 }
 
 .timeline-event-description {

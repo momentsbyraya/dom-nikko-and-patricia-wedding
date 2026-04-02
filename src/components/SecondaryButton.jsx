@@ -2,7 +2,7 @@ import React from 'react'
 
 const SecondaryButton = ({ children, href, onClick, className = '', target, rel, icon: Icon }) => {
   const baseClasses =
-    'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm sm:text-base font-albert font-medium transition-all duration-300 shadow-sm hover:shadow-md bg-gold text-forest hover:bg-gold-dark hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold'
+    'inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm sm:text-base font-albert font-medium transition-all duration-300 shadow-sm hover:shadow-md bg-forest text-white hover:bg-wedding-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest'
 
   if (href) {
     return (

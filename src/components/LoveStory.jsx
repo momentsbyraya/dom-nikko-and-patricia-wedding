@@ -211,7 +211,7 @@ const LoveStory = () => {
             type="button"
             onClick={() => setShowFullStory((v) => !v)}
             aria-expanded={showFullStory}
-            className="px-5 py-2 rounded-full bg-gold text-forest hover:bg-gold-dark hover:text-white transition-colors duration-200 font-albert text-sm sm:text-base"
+            className="px-5 py-2 rounded-full bg-forest text-white hover:bg-gold hover:text-forest transition-colors duration-200 font-albert text-sm sm:text-base"
           >
             {showFullStory ? 'Show summary' : 'Read full story'}
           </button>

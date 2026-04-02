@@ -63,8 +63,8 @@
 :root {
   --envelope-x: 300px;
   --envelope-y: 200px;
-  --envelope-bg: #AA8D5A;
-  --envelope-shadow: #8a7045;
+  --envelope-bg: #1f301e;
+  --envelope-shadow: #0b320b;
   --heart-bg: darkred;
   --heart-text: white;
   --letter-font: "Dancing Script", serif;
@@ -84,7 +84,7 @@
   }
   
   .envelope {
-    transform: rotate(-5deg) scale(0.85) !important;
+    transform: scale(0.85) !important;
   }
 }
 
@@ -103,10 +103,10 @@
   width: var(--envelope-x);
   height: var(--envelope-y);
   background: var(--envelope-bg);
-  box-shadow: inset 0 0 30px -5px var(--envelope-shadow), 0 0 50vw 0 rgba(170, 141, 90, 0.35);
+  box-shadow: inset 0 0 30px -5px var(--envelope-shadow), 0 0 50vw 0 rgba(16, 66, 16, 0.35);
   transform-style: preserve-3d;
   perspective: 1000px;
-  transform: rotate(-5deg);
+  transform: none;
 }
 
 .envelope-flap {

@@ -5,116 +5,104 @@
   },
   "parents": {
     "groom": {
-      "father": "",
-      "mother": ""
+      "father": "Domingo R. Negrite (+)",
+      "mother": "Marina O. Negrite"
     },
     "bride": {
-      "father": "",
-      "mother": ""
+      "father": "Rodel O. Historillo",
+      "mother": "Rosiel B. Historillo"
     }
   },
   "entourageList": [
     {
+      "category": "Officiating Minister",
+      "names": ["Rev. Miguelito P. Pabilonia, Jr."]
+    },
+    {
+      "category": "Parents of the Groom",
+      "names": [
+        "Domingo R. Negrite (+)",
+        "Santos C. Oliva",
+        "Marina O. Negrite"
+      ]
+    },
+    {
+      "category": "Parents of the Bride",
+      "names": [
+        "Rodel O. Historillo",
+        "Rosiel B. Historillo"
+      ]
+    },
+    {
       "category": "Principal Sponsors",
       "ninong": [
-        "Mr. Allan B. Mondalo",
-        "Mr. Crisente F. Bernales",
-        "Mr. Francisco Duque dela Casa",
-        "Mr. Erlindo L. Sala",
-        "Mr. Lito B. Macheca",
-        "Mr. Ronie Breviescas",
-        "Mr. Vironico Macheca",
-        "Mr. Rogelio M. Nozares Sr.",
-        "Mr. Rogelio Santa",
-        "Mr. Elibert T. Momo",
-        "Mr. Eddie Logronio",
-        "Mr. Lolito L. Pelaez",
-        "Mr. Jerry Pepino",
-        "Mr. Fernando Liparanon"
+        "Epitacio B. Mendiola",
+        "Ruel D. Elias",
+        "Aries Martin G. Giron",
+        "Mark Gerad A. Oliva",
+        "Christian O. Buyet",
+        "Nicki Abram Padrez, JP"
       ],
       "ninang": [
-        "Ms. Anji Prado",
-        "Mrs. Chona Eunice S. Jarina",
-        "Mrs. Irene Sala-Brucheseifer",
-        "Mrs. Julieta Tolentino",
-        "Mrs. Vicheryl D. Tamagos",
-        "Mrs. Ma. Rizalyn Sala-Jung",
-        "Mrs. Francisca Lagrama",
-        "Ms. Joecilyn L. Sala",
-        "Mrs. Joelyn T. Galgo",
-        "Mrs. Lelibeth C. Sala",
-        "Mrs. Juanita Baito",
-        "Mrs. Myrna U. Evilla",
-        "Mrs. Arlene S. Estrada",
-        "Mrs. Rowena S. Sanchez",
-        "Mrs. Elineta Tolentino"
+        "Carol Belandres",
+        "Jackie-Anne G. Bayhon",
+        "Evelyn M. Abapo",
+        "Junelyn Kate O. Monge",
+        "Josephine M. Esguerra"
       ]
     },
     {
       "category": "Bestman",
-      "names": ["Mr. Christian Denzo P. Lacerna"]
+      "names": ["Dom Igon O. Negrite"]
+    },
+    {
+      "category": "Matron",
+      "names": ["Arlon Joyce H. Saenz"]
     },
     {
       "category": "Maid of Honor",
-      "names": ["Ms. Diocel A. Alvizo"]
+      "names": ["Kristine Marife M. De Leon"]
     },
     {
       "category": "Candle Sponsors",
-      "names": ["Mr. Joevanny Gabenite", "Mrs. Merlinda V. Sala"]
+      "names": ["Russel Ace J. Popioco", "Wilma G. Baldebar"]
     },
     {
       "category": "Cord Sponsors",
-      "names": ["Mr. Jay-ar Macheca", "Ms. Ivy Michelle S. Mantilla"]
+      "names": ["Ivan Johnel B Historillo", "Daisy Jean Miranda"]
     },
     {
       "category": "Veil Sponsors",
-      "names": ["Mr. Dave S. Mantilla", "Mrs. Karylle S. Acevedo"]
+      "names": ["Mark Joseph P. Gloria", "Marie Elaine D. Negrete"]
     },
     {
       "category": "Secondary Sponsors",
       "groomsmen": [
-        "Mr. Kiven Sala",
-        "Mr. Hero Macheca",
-        "Mr. Christopher Sala",
-        "Aries Deliger",
-        "Ethan Bobieles",
-        "Fritz Ivan Miguel",
-        "Jade Cabadonga",
-        "Joseff Gertrude C. Macheca"
+        "Michael M. Faegane",
+        "Van Darryl A. De Guzman"
       ],
       "bridesmaid": [
-        "Ms. Samantha G. Paynandos",
-        "Ms. Angel Queen Pingkay",
-        "Ms. Vilmalyn M. Sanchez",
-        "Ms. Jane Mary Macheca",
-        "Miss Calexta Tiffany Barriga",
-        "Miss Ryza L. Macheca",
-        "Miss Dianne L. Macheca",
-        "Miss Xiannah Mae Mantilla"
+        "Jasmine Kaye M. Historillo"
       ]
     },
     {
       "category": "Ring Bearer",
-      "names": ["Sulaiman Molina"]
+      "names": ["Moises F. Bajamundi"]
     },
     {
       "category": "Bible Bearer",
-      "names": ["Joecary Jr. Gabenite"]
+      "names": ["Leone Vasilios Kaeyl Monge"]
     },
     {
       "category": "Coin Bearer",
-      "names": ["Kerzon Mantilla"]
-    },
-    {
-      "category": "Flower Boys",
-      "names": ["Jhan Flore Noel M. Villarina"]
+      "names": ["Gabriel Ron Yohan E. Canimo"]
     },
     {
       "category": "Flower Girls",
       "names": [
-        "Andrea M. De Jesus",
-        "Kimberly L. Macheca",
-        "Kathaleeyah Blaire L. Subricaray"
+        "Leanh Neriz F. Oliva",
+        "Lauren Gabrielle DL. Garcia",
+        "Audfile Lira P. Alcaraz"
       ]
     }
   ]

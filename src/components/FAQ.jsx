@@ -144,11 +144,12 @@ const FAQ = () => {
   }, [])
 
   return (
-    <div className="relative z-20 faq-section">
+    <div className="relative z-20 faq-section bg-forest">
       <div ref={faqRef} className="relative z-10 w-full px-8 sm:px-12 md:px-8 lg:px-16">
         <h3 ref={faqTitleRef} className="relative inline-block px-6 py-3 mb-12 text-center w-full">
           <span 
-            className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none capitalize faq-title-text"
+            className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none capitalize"
+            style={{ color: '#CBCBC0' }}
           >
             Frequently Asked Questions
           </span>
@@ -160,13 +161,13 @@ const FAQ = () => {
               return (
                 <div
                   key={index}
-                  className="border-b border-obsidian pb-6 pt-6 first:pt-0 last:border-b-0"
+                  className="border-b border-white/30 pb-6 pt-6 first:pt-0 last:border-b-0"
                 >
                   <div className="mb-2">
-                    <p className="text-base sm:text-lg font-albert text-forest mb-2 faq-question-bold">
+                    <p className="text-base sm:text-lg font-albert text-[#CBCBC0] mb-2 faq-question-bold">
                       Q: {text}
                     </p>
-                    <p className="text-sm sm:text-base font-albert font-thin text-obsidian whitespace-pre-line">
+                    <p className="text-sm sm:text-base font-albert font-thin text-[#CBCBC0]/90 whitespace-pre-line">
                       A: {parseAnswerWithPhoneNumbers(item.answer)}
                     </p>
                   </div>

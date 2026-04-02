@@ -30,7 +30,7 @@ export const prenupImages = {
   },
   rsvpBackground: PRENUP_IMAGE_POOL[8],
   modalBackground: PRENUP_IMAGE_POOL[6],
-  countdownBackground: PRENUP_IMAGE_POOL[9],
+  countdownBackground: PRENUP_IMAGE_POOL[2],
   ogImage: PRENUP_IMAGE_POOL[4],
   favicon: PRENUP_IMAGE_POOL[0],
   // Love story section: one polaroid per paragraph, in order (files 4, 8, 5, 10, 6)

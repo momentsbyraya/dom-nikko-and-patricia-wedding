@@ -78,7 +78,7 @@ const Venue = () => {
         trigger: venueTitleRef.current,
         start: "top 80%",
         animation: gsap.fromTo(venueTitleRef.current,
-          { opacity: 0, y: 30 },
+          { opacity: 1, y: 0 },
           { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
         ),
         toggleActions: "play none none reverse"
@@ -137,7 +137,10 @@ const Venue = () => {
       </div>
 
       {/* Venue Container */}
-      <div ref={venueRef} className="relative overflow-visible">
+      <div
+        ref={venueRef}
+        className="relative overflow-visible"
+      >
         <div className="relative overflow-hidden">
           <div className="text-center transition-opacity duration-500 ease-in-out">
             {/* ——— Mobile: Carousel (1 slide) + dynamic location info ——— */}
@@ -152,7 +155,7 @@ const Venue = () => {
                   className="flex items-center justify-center transition-opacity duration-200 z-10 flex-shrink-0 hover:opacity-70"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft className="w-8 h-8 text-gold" />
+                  <ChevronLeft className="w-8 h-8 text-forest" />
                 </button>
                 <div
                   className="w-full max-w-[220px] sm:max-w-[240px] aspect-square relative venue-image-container overflow-hidden rounded-full"
@@ -201,17 +204,19 @@ const Venue = () => {
                   className="flex items-center justify-center transition-opacity duration-200 z-10 flex-shrink-0 hover:opacity-70"
                   aria-label="Next image"
                 >
-                  <ChevronRight className="w-8 h-8 text-gold" />
+                  <ChevronRight className="w-8 h-8 text-forest" />
                 </button>
               </div>
 
               {/* Dynamic content: updates with current slide */}
-              <div className="venue-details-mobile w-full flex flex-col gap-4 px-2">
-                <div className="text-lg sm:text-xl font-boska text-forest text-center">
-                  {venueSlides[currentIndex].venue.name}
-                </div>
-                <div className="text-sm sm:text-base font-albert font-thin text-forest text-center space-y-1">
-                  <p>Ceremony & Reception: {ceremony.time} onwards</p>
+              <div className="venue-details-mobile w-full flex flex-col gap-2 px-2">
+                <div className="flex flex-col gap-0.5">
+                  <div className="text-lg sm:text-xl font-boska text-center" style={{ color: '#b88917' }}>
+                    {venueSlides[currentIndex].venue.name}
+                  </div>
+                  <div className="text-sm sm:text-base font-albert font-thin text-forest text-center space-y-0">
+                    <p>Ceremony & Reception: {ceremony.time} onwards</p>
+                  </div>
                 </div>
                 <div className="flex justify-center">
                   <SecondaryButton
@@ -234,7 +239,7 @@ const Venue = () => {
             >
               <div className="w-full flex justify-center items-center gap-4">
                 <button onClick={prevImage} className="hover:opacity-70" aria-label="Previous image">
-                  <ChevronLeft className="w-8 h-8 text-gold" />
+                  <ChevronLeft className="w-8 h-8 text-forest" />
                 </button>
                 <div
                   className="w-full max-w-[320px] lg:max-w-[380px] aspect-square relative venue-image-container overflow-hidden rounded-full flex items-center justify-center bg-white/90 border-2 border-gold/20"
@@ -258,7 +263,7 @@ const Venue = () => {
                   </div>
                 </div>
                 <button onClick={nextImage} className="hover:opacity-70" aria-label="Next image">
-                  <ChevronRight className="w-8 h-8 text-gold" />
+                  <ChevronRight className="w-8 h-8 text-forest" />
                 </button>
               </div>
               <div className="flex gap-2">
@@ -274,7 +279,7 @@ const Venue = () => {
                 ))}
               </div>
               <div className="flex flex-col gap-2 text-center">
-                <div className="text-lg sm:text-xl lg:text-2xl font-boska text-forest">
+                <div className="text-lg sm:text-xl lg:text-2xl font-boska" style={{ color: '#b88917' }}>
                   {ceremony.name}
                 </div>
                 <div className="text-sm sm:text-base font-albert font-thin text-forest space-y-1">

@@ -179,7 +179,7 @@ function AppContent() {
       <ScrollToTop />
       {/* Loader - shows while preloading */}
       {isLoading && (
-        <div className="fixed inset-0 z-[10000] flex flex-col items-center justify-center gap-8 sm:gap-10 bg-sage px-4">
+        <div className="fixed inset-0 z-[10000] flex flex-col items-center justify-center gap-8 sm:gap-10 bg-[#F8F3EA] px-4">
           <p
             className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-gold"
             style={{ fontFamily: 'var(--letter-font, "Great Vibes", cursive)' }}

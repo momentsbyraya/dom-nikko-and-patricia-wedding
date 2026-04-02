@@ -305,41 +305,51 @@ const Details = () => {
       ref={sectionRef}
       id="details"
       data-section="details"
-      className="relative pb-20 w-full overflow-visible bg-sage details-section"
+      className="relative pb-20 w-full overflow-visible details-section"
     >
-      {/* Flower Banner Image at Top */}
-      <ImageBanner 
-        src="/assets/images/graphics/flower-banner.png" 
-        alt="Flower banner"
-      />
-      
-      {/* Content */}
-      <div className="relative z-20 flex items-center justify-center pt-12 pb-32">
-        <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
-          {/* Header Section */}
-          <div className="text-center">
-            <div ref={headerContentRef}>
-              <p className="text-base sm:text-lg font-albert font-thin text-obsidian max-w-3xl mx-auto leading-relaxed">
-                Join us as we exchange our vows
-              </p>
-              <Divider />
-            </div>
-          </div>
+      <div
+        className="relative"
+        style={{
+          backgroundImage: 'url(/assets/images/graphics/bg-1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Flower Banner Image at Top */}
+        <ImageBanner
+          src="/assets/images/graphics/flower-banner.png"
+          alt="Flower banner"
+        />
 
-          {/* Venue Section */}
-          <Venue />
-                  </div>
-                </div>
-                
-       {/* Flower Divider */}
-       <div ref={curvedDivider1Ref} className="relative w-full h-16 sm:h-20 md:h-24 flex items-center justify-center">
-         <img 
-           src="/assets/images/graphics/flower-divider.png" 
-           alt="Flower divider"
-           className="w-full h-full object-contain"
-           style={{ transform: 'scale(2.5) rotate(5deg)' }}
-         />
+        {/* Content */}
+        <div className="relative z-20 flex items-center justify-center pt-12 pb-32">
+          <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
+            {/* Header Section */}
+            <div className="text-center">
+              <div ref={headerContentRef}>
+                <p className="text-base sm:text-lg font-albert font-thin text-obsidian max-w-3xl mx-auto leading-relaxed">
+                  Join us as we exchange our vows
+                </p>
+                <Divider />
+              </div>
             </div>
+
+            {/* Venue Section */}
+            <Venue />
+          </div>
+        </div>
+
+        {/* Flower Divider */}
+        <div ref={curvedDivider1Ref} className="relative w-full h-16 sm:h-20 md:h-24 flex items-center justify-center">
+          <img
+            src="/assets/images/graphics/flower-banner-3.png"
+            alt="Flower divider"
+            className="w-full h-full object-contain"
+            style={{ transform: 'scale(2.5) rotate(5deg)' }}
+          />
+        </div>
+      </div>
 
       {/* Content */}
       <div className="relative z-20 flex items-center justify-center pt-12">

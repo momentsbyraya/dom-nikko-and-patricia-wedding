@@ -154,13 +154,23 @@ const Gallery = () => {
   return (
     <div ref={sectionRef} className="relative pb-8 sm:pb-12 md:pb-16">
       {/* Title strip — same layout / styles as FAQ (Details.css .faq-section, .faq-title-text) */}
-      <div className="relative z-20 faq-section !py-8 sm:!py-10">
+      <div
+        className="relative z-20 !py-8 sm:!py-10 bg-forest"
+        style={{
+          width: '100vw',
+          marginLeft: 'calc(-50vw + 50%)',
+          marginRight: 'calc(-50vw + 50%)'
+        }}
+      >
         <div className="relative z-10 w-full px-8 sm:px-12 md:px-8 lg:px-16">
           <h3
             ref={titleRef}
             className="relative inline-block px-6 py-3 text-center w-full"
           >
-            <span className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none capitalize faq-title-text">
+            <span
+              className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none capitalize"
+              style={{ color: '#CBCBC0' }}
+            >
               Gallery
             </span>
           </h3>

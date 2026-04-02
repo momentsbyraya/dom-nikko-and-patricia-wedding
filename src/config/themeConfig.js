@@ -1,4 +1,4 @@
-// Enchanted Forest — Forest #1F2B20 | Antique Gold #AA8D5A | Obsidian #000000 | Sage Mist #CBCBC0
+// Enchanted Forest — Forest #104210 | Antique Gold #AA8D5A | Obsidian #000000 | Sage Mist #CBCBC0
 export const themeConfig = {
     backgrounds: {
         primary: 'bg-forest',
@@ -20,17 +20,17 @@ export const themeConfig = {
         pause: 'text-white',
         custom: 'text-obsidian',
         light: '#AA8D5A',
-        lightBlack: '#1F2B20',
+        lightBlack: '#104210',
         cream: '#CBCBC0',
         tan: '#AA8D5A',
-        wine: '#1F2B20',
-        burgundyDark: '#1F2B20',
-        burntOrange: '#1F2B20',
-        sageGreen: '#1F2B20',
+        wine: '#104210',
+        burgundyDark: '#104210',
+        burntOrange: '#104210',
+        sageGreen: '#104210',
     },
 
     borders: {
-        primary: 'border-gold',
+        primary: 'border-forest',
         secondary: 'border-gold/60',
         accent: 'border-gold',
         theme: 'border-gold/40',
@@ -38,7 +38,7 @@ export const themeConfig = {
     },
 
     buttons: {
-        primary: 'bg-gold hover:bg-gold-dark',
+        primary: 'bg-forest hover:bg-wedding-600',
         secondary: 'border border-gold hover:border-gold-dark',
         text: 'text-forest hover:text-white',
         theme: 'bg-gold hover:bg-gold-dark',
@@ -46,7 +46,7 @@ export const themeConfig = {
     },
 
     hover: {
-        primary: 'hover:bg-gold-dark',
+        primary: 'hover:bg-wedding-600',
         secondary: 'hover:border-gold-dark hover:text-white',
         theme: 'hover:bg-gold-dark',
         garden: 'hover:bg-gold',
@@ -74,20 +74,20 @@ export const themeConfig = {
     },
 
     cssVariables: {
-        '--primary-bg': '#1F2B20',
+        '--primary-bg': '#104210',
         '--secondary-bg': '#AA8D5A',
-        '--accent-bg': '#1F2B20',
+        '--accent-bg': '#104210',
         '--accent-hover': '#8a7045',
         '--primary-text': '#000000',
         '--secondary-text': '#AA8D5A',
         '--accent-text': '#AA8D5A',
         '--muted-text': '#8a7045',
         '--border-color': '#000000',
-        '--custom-theme': '#1F2B20',
+        '--custom-theme': '#104210',
         '--cream': '#CBCBC0',
         '--tan': '#AA8D5A',
-        '--wine': '#1F2B20',
-        '--burgundy-dark': '#1F2B20',
+        '--wine': '#104210',
+        '--burgundy-dark': '#104210',
         '--garden-bg': '#CBCBC0',
     }
 }

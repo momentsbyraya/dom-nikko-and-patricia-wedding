@@ -11,7 +11,7 @@ export default {
       },
       colors: {
         // Enchanted Forest — strict palette
-        forest: '#1F2B20',
+        forest: '#104210',
         gold: '#AA8D5A',
         'gold-dark': '#8a7045',
         obsidian: '#000000',
@@ -21,7 +21,7 @@ export default {
           cream: '#CBCBC0',
           tan: '#AA8D5A',
           wine: '#AA8D5A',
-          dark: '#1F2B20',
+          dark: '#104210',
         },
         'wedding': {
           50: '#CBCBC0',
@@ -29,11 +29,11 @@ export default {
           200: '#AA8D5A',
           300: '#8a7045',
           400: '#5c4a32',
-          500: '#1F2B20',
-          600: '#1a241b',
-          700: '#151d16',
-          800: '#1F2B20',
-          900: '#0d120d',
+          500: '#104210',
+          600: '#0f3a0f',
+          700: '#0d330d',
+          800: '#0b2b0b',
+          900: '#092309',
         },
         'rose': {
           50: '#fff1f2',

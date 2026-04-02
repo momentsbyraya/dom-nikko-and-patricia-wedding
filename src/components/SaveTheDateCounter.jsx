@@ -72,13 +72,12 @@ const SaveTheDateCounter = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-b from-forest/55 via-forest/35 to-forest/65" aria-hidden />
       <div className="relative z-20 max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto px-4 sm:px-6 md:px-8 flex flex-col justify-between min-h-[400px] sm:min-h-[500px] md:min-h-[600px] min-[992px]:min-h-[760px]">
         {/* Title */}
         <div className="text-center">
           <h2
             ref={titleRef}
-            className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl capitalize text-gold drop-shadow-sm"
+            className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl capitalize text-forest drop-shadow-sm"
           >
             Save The Date
           </h2>

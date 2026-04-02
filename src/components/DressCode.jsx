@@ -150,18 +150,10 @@ const DressCode = () => {
   }, [])
 
   return (
-    <div className="relative pb-16 sm:pb-20 md:pb-24">
+    <div className="relative">
       {/* Dress Code Title */}
       <div ref={dressCodeTitleRef} className="text-center mb-12 sm:mb-16">
         <div>
-          {/* Single Flower 1 Image */}
-          <div className="flex justify-center mb-4">
-            <img 
-              src="/assets/images/graphics/single-flower-1.png" 
-              alt="Flower decoration" 
-              className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 object-contain"
-            />
-          </div>
           <h3 className="relative inline-block px-6 py-3">
             <span 
               className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl inline-block leading-none capitalize dress-code-title-text"
@@ -195,7 +187,7 @@ const DressCode = () => {
                       {/* Category Name and Description Container */}
                       <div className="w-full">
                         {/* Category Name */}
-                        <div className="text-lg sm:text-xl md:text-2xl font-boska text-forest mb-2 text-right lg-custom:text-left">
+                        <div className="text-lg sm:text-xl md:text-2xl font-boska mb-2 text-right lg-custom:text-left" style={{ color: '#b88917' }}>
                           {section.title}
             </div>
             
@@ -288,7 +280,7 @@ const DressCode = () => {
                       {/* Category Name and Description Container */}
                       <div>
                         {/* Category Name */}
-                        <div className="text-lg sm:text-xl md:text-2xl font-boska text-forest mb-2 text-left lg-custom:text-left">
+                        <div className="text-lg sm:text-xl md:text-2xl font-boska mb-2 text-left lg-custom:text-left" style={{ color: '#b88917' }}>
                           {section.title}
                         </div>
                         
@@ -300,7 +292,7 @@ const DressCode = () => {
                         )}
                         
                         {/* Color Swatches */}
-                        <div className="flex justify-start lg-custom:justify-start" style={{ gap: '-4px' }}>
+                        <div className="flex gap-2 justify-start lg-custom:justify-start">
                           {guestColors.map((color, index) => (
                             <div
                               key={index}
@@ -308,7 +300,6 @@ const DressCode = () => {
                               onMouseEnter={() => setActiveTooltip(`guests-${index}`)}
                               onMouseLeave={() => setActiveTooltip(null)}
                               onClick={() => setActiveTooltip(activeTooltip === `guests-${index}` ? null : `guests-${index}`)}
-                              style={{ marginLeft: index > 0 ? '-8px' : '0' }}
                             >
                               <div className="w-6 h-6 sm:w-8 sm:h-8 border border-gray-300 rounded cursor-pointer" style={{ backgroundColor: color }}></div>
                               {activeTooltip === `guests-${index}` && (

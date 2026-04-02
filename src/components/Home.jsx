@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from './Hero'
 import Venue from './Venue'
 import Schedule from './Schedule'
+import DressCode from './DressCode'
 import EntourageSection from './EntourageSection'
 import RSVPSection from './RSVPSection'
 import LoveStory from './LoveStory'
@@ -22,87 +23,203 @@ const Home = ({ onOpenRSVP }) => {
       {/* Hero Section */}
       <Hero />
 
-      {/* Flower Banner - Top */}
-      <div className="relative" style={{ width: '100vw' }}>
-        <img 
-          src="/assets/images/graphics/flower-banner-2.png" 
-          alt="Flower banner"
-          className="w-full h-auto object-contain"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-20 flex items-center justify-center pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
-        <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
-          {/* Venue Section */}
-          <Venue />
+      {/* Venue Section Wrapper */}
+      <div
+        className="embossed-bg"
+        style={{
+          backgroundImage: 'url(/assets/images/graphics/bg-1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* Flower Banner - Top */}
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-2.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+          />
         </div>
-      </div>
 
-      {/* Flower Banner - Bottom */}
-      <div className="relative" style={{ width: '100vw' }}>
-        <img 
-          src="/assets/images/graphics/flower-banner-2.png" 
-          alt="Flower banner"
-          className="w-full h-auto object-contain"
-          style={{ transform: 'scaleY(-1)' }}
-        />
+        {/* Content */}
+        <div className="relative z-20 flex items-center justify-center pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
+          <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
+            {/* Venue Section */}
+            <Venue />
+          </div>
+        </div>
+
+        {/* Flower Banner - Bottom */}
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-3.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </div>
 
       <FullBleedPhoto
-        src={prenupImages.fullBleedMain}
+        src={prenupImages.pool[8]}
         alt={photoAlt}
       />
 
-      {/* Content */}
-      <div className="relative z-20 flex items-center justify-center">
-        <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
-          {/* Schedule Section */}
-          <Schedule />
+      {/* Schedule Section Wrapper */}
+      <div
+        style={{
+          backgroundImage: 'url(/assets/images/graphics/bg-1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-3.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+            style={{ transform: 'scaleY(-1)' }}
+          />
+        </div>
+
+        <div className="relative z-20 flex items-center justify-center">
+          <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
+            {/* Schedule Section */}
+            <Schedule />
+          </div>
+        </div>
+
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-2.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+            style={{ transform: 'scaleY(-1)' }}
+          />
         </div>
       </div>
 
-      <FullBleedPhotoSplit
-        leftSrc={prenupImages.splitA.left}
-        rightSrc={prenupImages.splitA.right}
-        leftAlt={photoAlt}
-        rightAlt={photoAlt}
+      <FullBleedPhoto
+        src={prenupImages.pool[4]}
+        alt={photoAlt}
       />
 
-      {/* Entourage Section - between Order of Events and Dress Code */}
-      <EntourageSection />
+      <div
+        style={{
+          backgroundImage: 'url(/assets/images/graphics/bg-1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        {/* RSVP Section */}
+        <div className="relative z-20 flex items-center justify-center">
+          <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
+            <RSVPSection onOpenRSVP={onOpenRSVP} />
+          </div>
+        </div>
 
-      <FullBleedPhotoSplit
-        invertLayout
-        leftSrc={prenupImages.splitB.right}
-        rightSrc={prenupImages.splitB.left}
-        leftAlt={photoAlt}
-        rightAlt={photoAlt}
+        <div className="w-full max-w-3xl mx-auto px-4 flex items-center gap-3">
+          <div className="h-px bg-gold/50 flex-1" />
+          <div className="w-2 h-2 border border-gold/70 rotate-45 flex-shrink-0" />
+          <div className="h-px bg-gold/50 flex-1" />
+        </div>
+
+        {/* Entourage Section */}
+        <EntourageSection />
+
+        <div className="w-full max-w-3xl mx-auto px-4 flex items-center gap-3">
+          <div className="h-px bg-gold/50 flex-1" />
+          <div className="w-2 h-2 border border-gold/70 rotate-45 flex-shrink-0" />
+          <div className="h-px bg-gold/50 flex-1" />
+        </div>
+
+        <div className="relative z-20 flex items-center justify-center">
+          <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
+            <GiftRegistry />
+          </div>
+        </div>
+      </div>
+
+      <FullBleedPhoto
+        src={prenupImages.pool[10]}
+        alt={photoAlt}
       />
+
+      <div
+        style={{
+          backgroundImage: 'url(/assets/images/graphics/bg-1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-2.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+        <div className="relative z-20 flex items-center justify-center pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 md:pb-20">
+          <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
+            <DressCode />
+          </div>
+        </div>
+
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-3.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+      </div>
+
+      <FullBleedPhoto
+        src={prenupImages.pool[7]}
+        alt={photoAlt}
+      />
+
+      <div
+        style={{
+          backgroundImage: 'url(/assets/images/graphics/bg-1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-3.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+            style={{ transform: 'scaleY(-1)' }}
+          />
+        </div>
+
+        <div className="relative z-20 flex items-center justify-center">
+          <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
+            <LoveStory />
+          </div>
+        </div>
+
+        <div className="relative" style={{ width: '100vw' }}>
+          <img
+            src="/assets/images/graphics/flower-banner-2.png"
+            alt="Flower banner"
+            className="w-full h-auto object-contain"
+            style={{ transform: 'scaleY(-1)' }}
+          />
+        </div>
+      </div>
 
       <div className="relative z-20 flex items-center justify-center">
         <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
-          <LoveStory />
-
-          {/* Gallery — masonry-style grid + lightbox */}
+          {/* Gallery - masonry-style grid + lightbox */}
           <Gallery />
-        </div>
-      </div>
-
-      <div className="relative z-20 flex items-center justify-center pt-12">
-        <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
-          <GiftRegistry />
-        </div>
-      </div>
-
-      <FullBleedPhoto
-        src={prenupImages.splitB.right}
-        alt={photoAlt}
-      />
-
-      <div className="relative z-20 flex items-center justify-center">
-        <div className="max-w-xs sm:max-w-md lg:max-w-3xl w-full mx-auto">
-          <RSVPSection onOpenRSVP={onOpenRSVP} />
         </div>
       </div>
 

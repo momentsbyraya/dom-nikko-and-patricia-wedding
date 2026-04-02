@@ -108,7 +108,7 @@ const Hero = () => {
           <p ref={dateRef} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-foglihten text-white" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.25)' }}>
             {formatDate()}
           </p>
-          <p ref={venueRef} className="text-xs sm:text-sm md:text-base font-albert mt-2 sm:mt-3 text-gold" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.45)' }}>
+          <p ref={venueRef} className="text-xs sm:text-sm md:text-base font-albert mt-2 sm:mt-3 text-[#F8F3EA]" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.45)' }}>
             {venueName}
           </p>
         </div>
@@ -139,7 +139,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <p
             ref={coupleTogetherRef}
-            className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-gold"
+            className="font-foglihten text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-[#F8F3EA]"
             style={{ textShadow: '0 1px 3px rgba(0,0,0,0.45), 0 0 24px rgba(0,0,0,0.2)' }}
           >
             {couple.together}

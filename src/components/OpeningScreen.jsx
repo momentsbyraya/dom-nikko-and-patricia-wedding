@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
-import { couple } from '../data'
-import { weddingConfig } from '../config/weddingConfig'
+import { prenupImages } from '../data/prenupImages'
 
 function OpeningScreen({ onEnvelopeOpen }) {
   const envelopeRef = useRef(null)
   const openingSectionRef = useRef(null)
   const clickMeRef = useRef(null)
   const coupleNameRef = useRef(null)
+  const stampRef = useRef(null)
 
   // Animate text and envelope on mount
   useEffect(() => {
@@ -48,6 +48,15 @@ function OpeningScreen({ onEnvelopeOpen }) {
         ease: "power2.out"
       }, "-=0.6")
     }
+
+    if (stampRef.current) {
+      gsap.to(stampRef.current, {
+        rotation: 360,
+        duration: 8,
+        ease: "none",
+        repeat: -1
+      })
+    }
   }, [])
 
   const handleEnvelopeClick = () => {
@@ -75,19 +84,48 @@ function OpeningScreen({ onEnvelopeOpen }) {
   return (
     <div 
       ref={openingSectionRef}
-      className="fixed inset-0 z-[9999] flex items-center justify-center opening-section bg-forest"
-        style={{
-        backgroundImage: 'linear-gradient(180deg, rgba(31,43,32,0.92) 0%, rgba(31,43,32,0.88) 50%, rgba(31,43,32,0.94) 100%), url(/assets/images/graphics/textured-bg-2.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      className="fixed inset-0 z-[9999] flex items-center justify-center opening-section"
     >
+      <div className="absolute inset-0 grid grid-cols-1 grid-rows-3">
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${prenupImages.pool[0] || '/assets/images/prenup/1.jpeg'})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 20%',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%)'
+          }}
+        />
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${prenupImages.pool[4] || '/assets/images/prenup/5.jpeg'})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 20%',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%)'
+          }}
+        />
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${prenupImages.pool[9] || '/assets/images/prenup/10.jpeg'})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 45%',
+            backgroundRepeat: 'no-repeat',
+            filter: 'grayscale(100%)'
+          }}
+        />
+      </div>
+      <div className="absolute inset-0 bg-black/20 z-[1]" />
       <section className="cssletter flex flex-col items-center relative z-10 w-full py-8" style={{ minHeight: 'auto', height: 'auto' }}>
-        {/* Click me text */}
-        <div ref={clickMeRef} className="mb-12 sm:mb-16 md:mb-20 lg:mb-24 text-center click-me-container">
-          <p className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gold" style={{ fontFamily: 'var(--letter-font)' }}>
-            Click me!
+        <div ref={clickMeRef} className="mb-4 sm:mb-6 md:mb-8 lg:mb-10 text-center click-me-container">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-foglihten uppercase leading-tight" style={{ color: '#EDEDDD' }}>
+            YOU ARE GRACIOUSLY
+          </p>
+          <p className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] leading-tight" style={{ fontFamily: 'Pinyon Script, cursive', color: '#F5F5DC' }}>
+            Invited
           </p>
         </div>
         <div className="envelope" ref={envelopeRef}>
@@ -98,6 +136,7 @@ function OpeningScreen({ onEnvelopeOpen }) {
             onClick={handleEnvelopeClick}
           >
             <img 
+              ref={stampRef}
               src="/assets/images/graphics/stamp.png" 
               alt="Stamp" 
               className="stamp-image"
@@ -127,25 +166,18 @@ function OpeningScreen({ onEnvelopeOpen }) {
             />
           </div>
         </div>
-        {/* Couple name and date below envelope */}
-        <div ref={coupleNameRef} className="mt-12 sm:mt-16 md:mt-20 text-center couple-name-container">
-          <h2 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-script leading-tight text-gold"
-            style={{ 
-              fontSize: 'clamp(1.5rem, 4vw, 48px)',
-              textShadow: '0 1px 2px rgba(0,0,0,0.35)'
-            }}
-          >
-            {couple.together}
-          </h2>
+        <div ref={coupleNameRef} className="mt-4 sm:mt-6 md:mt-8 text-center couple-name-container">
           <p 
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-script mt-1 text-white"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-foglihten uppercase leading-tight"
             style={{ 
-              fontSize: 'clamp(1rem, 2.5vw, 30px)',
-              textShadow: '0 1px 2px rgba(0,0,0,0.35)'
+              color: '#F8F3EA',
+              fontSize: 'clamp(1.5rem, 4vw, 48px)',
+              textShadow: 'none',
+              cursor: 'pointer'
             }}
+            onClick={handleEnvelopeClick}
           >
-            {new Date(weddingConfig.wedding.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            CLICK TO OPEN
           </p>
         </div>
       </section>
